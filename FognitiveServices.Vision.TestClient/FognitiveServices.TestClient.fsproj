@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ComputerVisionWrapper\ComputerVisionWrapper.fsproj" />
+    <ProjectReference Include="..\FognitiveServices.Vision\FognitiveServices.Vision.fsproj" />
   </ItemGroup>
 
 </Project>

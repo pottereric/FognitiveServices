@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ComputerVisionWrapper", "ComputerVisionWrapper\ComputerVisionWrapper.fsproj", "{FCEDBAB7-41CE-4835-833D-A3BF97307B78}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FognitiveServices.Vision", "FognitiveServices.Vision\FognitiveServices.Vision.fsproj", "{FCEDBAB7-41CE-4835-833D-A3BF97307B78}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ComputerVisionWrapperTestClient", "ComputerVisionWrapperTestClient\ComputerVisionWrapperTestClient.fsproj", "{9E10DC96-E7AB-400F-BF77-8E52A175EDC4}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FognitiveServices.TestClient", "FognitiveServices.Vision.TestClient\FognitiveServices.TestClient.fsproj", "{9E10DC96-E7AB-400F-BF77-8E52A175EDC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
