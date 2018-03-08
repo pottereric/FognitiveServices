@@ -1,24 +1,31 @@
 ﻿open System
 open System.Linq
 open Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models
-open FognitiveServices
+open FognitiveServices.Vision
 open System.Threading
 
-let printResults (results : ImageAnalysis ) =
-    printfn "Description: %s" (results.Description.Captions.FirstOrDefault().Text)
+let subscriptionKey = "<Your-Subscription-Key>" 
+let region = AzureRegions.Southcentralus
+let testFileName = @"c:\i\dog.jpg"
 
-    results.Tags |> Seq.iter (fun t -> printfn "%s %f" t.Name t.Confidence.Value)
+let printResults (analysis : ImageAnalysis) =
+    printfn "Description: %s" (analysis.Description.Captions.FirstOrDefault().Text)
+
+    printfn "tags:"
+    Tags.get analysis
+    |> Seq.iter (fun t -> printfn "%s %f" t.Name (Option.defaultValue -1.0 t.Confidence))
 
     printfn "colors:"
-    results.Color.DominantColors |> Seq.iter (fun c -> printfn "%s" c)
+    let colors = Colors.get analysis
+    colors.Colors |> Seq.iter (fun c -> printfn "%s" c)
 
 
 [<EntryPoint>]
 let main argv =
     let op = async {
-         use client = Vision.createClient "<Your-Subscription-Key>" AzureRegions.Southcentralus
-         let! tags = Vision.getInfoForImage client @"<Your-Image-Path>"
-         printResults tags
+         use client = Client.create subscriptionKey region
+         let! analysis = Client.analyzeImageAsync client testFileName
+         printResults analysis 
     }
     
     Async.StartWithContinuations(op, ignore, (fun e -> printfn "%A" e), ignore, CancellationToken.None)

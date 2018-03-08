@@ -1,16 +1,17 @@
-namespace FognitiveServices
+namespace FognitiveServices.Vision
 
-module Vision =
-    open Microsoft.Azure.CognitiveServices.Vision.ComputerVision
-    open System.IO
-    open Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models
+open Microsoft.Azure.CognitiveServices.Vision.ComputerVision
+open System.IO
+open Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models
+
+module Client =
     
-    let createClient apiKey region =
+    let create apiKey region =
         let client = new ComputerVisionAPI( ApiKeyServiceClientCredentials(apiKey))
         client.AzureRegion <- region
         client
 
-    let getInfoForImage (client : ComputerVisionAPI )imagePath =
+    let analyzeImageAsync (client : ComputerVisionAPI) imagePath =
         async {
             use stream = new FileStream(imagePath, FileMode.Open)
 
@@ -26,3 +27,5 @@ module Vision =
             // Analyze the image.
             return! client.AnalyzeImageInStreamAsync(stream, featureTypes) |> Async.AwaitTask
         }
+
+

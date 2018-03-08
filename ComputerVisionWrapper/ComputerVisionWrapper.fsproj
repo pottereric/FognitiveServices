@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Vision.fs" />
+    <Compile Include="Client.fs" />
+    <Compile Include="Tags.fs" />
+    <Compile Include="Colors.fs" />
   </ItemGroup>
 
   <ItemGroup>
