@@ -5,7 +5,11 @@ VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FognitiveServices.Vision", "FognitiveServices.Vision\FognitiveServices.Vision.fsproj", "{FCEDBAB7-41CE-4835-833D-A3BF97307B78}"
 EndProject
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FognitiveServices.TestClient", "FognitiveServices.Vision.TestClient\FognitiveServices.TestClient.fsproj", "{9E10DC96-E7AB-400F-BF77-8E52A175EDC4}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FognitiveServices.Vision.TestClient", "FognitiveServices.Vision.TestClient\FognitiveServices.Vision.TestClient.fsproj", "{9E10DC96-E7AB-400F-BF77-8E52A175EDC4}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FognitiveServices.Text", "FognitiveServices.Text\FognitiveServices.Text.fsproj", "{9A8F0DC5-8F9E-4E08-9A80-C759FD58FEB3}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FognitiveServices.Text.TestClient", "FognitiveServices.Text.TestClient\FognitiveServices.Text.TestClient.fsproj", "{FCD5B8BE-6959-4583-9CD5-9523DDA52B3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{9E10DC96-E7AB-400F-BF77-8E52A175EDC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E10DC96-E7AB-400F-BF77-8E52A175EDC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E10DC96-E7AB-400F-BF77-8E52A175EDC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A8F0DC5-8F9E-4E08-9A80-C759FD58FEB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8F0DC5-8F9E-4E08-9A80-C759FD58FEB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8F0DC5-8F9E-4E08-9A80-C759FD58FEB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A8F0DC5-8F9E-4E08-9A80-C759FD58FEB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD5B8BE-6959-4583-9CD5-9523DDA52B3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD5B8BE-6959-4583-9CD5-9523DDA52B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD5B8BE-6959-4583-9CD5-9523DDA52B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD5B8BE-6959-4583-9CD5-9523DDA52B3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
