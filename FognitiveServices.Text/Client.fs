@@ -10,8 +10,15 @@ module Client =
         client.SubscriptionKey <- key
         client
 
-    let getTags (client: TextAnalyticsAPI) inputs =
-        client.KeyPhrases(new MultiLanguageBatchInput(inputs));
+    //let getTags (client: TextAnalyticsAPI) inputs =
+    //    client.KeyPhrases(new MultiLanguageBatchInput(inputs));
+
+    let getTags (client: TextAnalyticsAPI) (inputs : (string * string * string) list) =
+        let multiLanguageInputs = inputs |> Seq.map (fun i -> 
+            let language, id, text = i
+            MultiLanguageInput(language, id, text))
+        let multiLanguageInputCollection = System.Collections.Generic.List(multiLanguageInputs)
+        client.KeyPhrases(new MultiLanguageBatchInput(multiLanguageInputCollection));
 
     let detectLanguage (client: TextAnalyticsAPI) inputs =
         client.DetectLanguage(new BatchInput(inputs))

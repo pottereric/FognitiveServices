@@ -7,13 +7,8 @@ let subscriptionKey =  "559348dee4b648739bf57426598c7834"
 
 
 let TestKeyPhrase _ = 
-    let inputs = ResizeArray<_>()// new List<MultiLanguageInput>()
-
-    let input1 = new MultiLanguageInput("en", "1",  "What is the most important phrase in this sentance?")
-    let input2 = new MultiLanguageInput("en", "2",  "This is the test text that I am analyzing")
-    inputs.Add(input1)
-    inputs.Add(input2)
-
+    let inputs = [("en", "1",  "What is the most important phrase in this sentance?");
+                    ("en", "2",  "This is the test text that I am analyzing")]
     let client = FognitiveServices.Text.Client.create subscriptionKey azureRegion
     let results = FognitiveServices.Text.Client.getTags client inputs
     
