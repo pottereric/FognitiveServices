@@ -15,10 +15,8 @@ let TestKeyPhrase _ =
     results.Documents |> Seq.iter (fun r -> r.KeyPhrases |> Seq.iter (fun kp -> printfn "%s %s" r.Id kp))
 
 let TestLanguageDetection _ =
-    let inputs = ResizeArray<_>()
-    inputs.Add(new Input("1", "This is a document written in English."))
-    inputs.Add(new Input("2", "Este es un document escrito en Español."))
-    inputs.Add(new Input("3", "这是一个用中文写的文件"))
+    let inputs = [("1", "This is a document written in English.");
+                    ( "2", "Este es un document escrito en Español.") ]
 
     let client = FognitiveServices.Text.Client.create subscriptionKey azureRegion
     let results = FognitiveServices.Text.Client.detectLanguage client inputs
@@ -27,11 +25,10 @@ let TestLanguageDetection _ =
 
 let TestSentimentAnalysis _ =
 
-    let inputs = ResizeArray<_>()
-    inputs.Add(new MultiLanguageInput("en", "0", "I had the best day of my life."))
-    inputs.Add(new MultiLanguageInput("en", "1", "This was a waste of my time. The speaker put me to sleep."))
-    inputs.Add(new MultiLanguageInput("es", "2", "No tengo dinero ni nada que dar..."))
-    inputs.Add(new MultiLanguageInput("it", "3", "L'hotel veneziano era meraviglioso. È un bellissimo pezzo di architettura."))
+    let inputs = [("en", "0", "I had the best day of my life.");
+                    ("en", "1", "This was a waste of my time. The speaker put me to sleep.");
+                    ("es", "2", "No tengo dinero ni nada que dar...");
+                    ("it", "3", "L'hotel veneziano era meraviglioso. È un bellissimo pezzo di architettura.")]
 
     let client = FognitiveServices.Text.Client.create subscriptionKey azureRegion
     let results = FognitiveServices.Text.Client.sentimentAnalysis client inputs
