@@ -1,0 +1,25 @@
+type project
+title
+    FognitiveServices
+owners
+    Eric Potter
+authors 
+    Eric Potter
+projectUrl
+    https://github.com/pottereric/FognitiveServices
+iconUrl
+    https://raw.githubusercontent.com/pottereric/FognitiveServices/master/docs/files/img/logo.png
+licenseUrl
+    https://github.com/pottereric/FognitiveServices/blob/master/LICENSE.txt
+requireLicenseAcceptance
+    false
+copyright
+    Copyright 2015
+tags
+    F# Azure CognitiveServices
+summary
+    An F# wrapper around the Azure Cognitive Services APIs.
+description
+    An F# wrapper around the Azure Cognitive Services APIs.
+
+

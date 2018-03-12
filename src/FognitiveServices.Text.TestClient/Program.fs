@@ -3,7 +3,7 @@
 open Microsoft.Azure.CognitiveServices.Language.TextAnalytics.Models
 
 let azureRegion = AzureRegions.Westcentralus
-let subscriptionKey =  "559348dee4b648739bf57426598c7834"
+let subscriptionKey =  "<YOUR_SUBSCRIPTION_KEY_HERE>"
 
 
 let TestKeyPhrase _ = 

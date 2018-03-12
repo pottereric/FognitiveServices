@@ -4,7 +4,7 @@ open Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models
 open FognitiveServices.Vision
 open System.Threading
 
-let subscriptionKey = "<Your-Subscription-Key>" 
+let subscriptionKey = "<YOUR_SUBSCRIPTION_KEY_HERE>" 
 let region = AzureRegions.Southcentralus
 let testFileName = @"c:\i\dog.jpg"
 

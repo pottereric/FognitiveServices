@@ -1,15 +1,47 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FognitiveServices.Vision", "FognitiveServices.Vision\FognitiveServices.Vision.fsproj", "{FCEDBAB7-41CE-4835-833D-A3BF97307B78}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{63297B98-5CED-492C-A5B7-A5B4F73CF142}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+		paket.lock = paket.lock
+	EndProjectSection
 EndProject
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FognitiveServices.Vision.TestClient", "FognitiveServices.Vision.TestClient\FognitiveServices.Vision.TestClient.fsproj", "{9E10DC96-E7AB-400F-BF77-8E52A175EDC4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A6A6AF7D-D6E3-442D-9B1E-58CC91879BE1}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FognitiveServices.Text", "FognitiveServices.Text\FognitiveServices.Text.fsproj", "{9A8F0DC5-8F9E-4E08-9A80-C759FD58FEB3}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FognitiveServices", "src\FognitiveServices\FognitiveServices.fsproj", "{A70BA8A0-CFD9-4591-A678-64E54E63ABF1}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FognitiveServices.Text.TestClient", "FognitiveServices.Text.TestClient\FognitiveServices.Text.TestClient.fsproj", "{FCD5B8BE-6959-4583-9CD5-9523DDA52B3F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{BF60BC93-E09B-4E5F-9D85-95A519479D54}"
+	ProjectSection(SolutionItems) = preProject
+		build.fsx = build.fsx
+		README.md = README.md
+		RELEASE_NOTES.md = RELEASE_NOTES.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{83F16175-43B1-4C90-A1EE-8E351C33435D}"
+	ProjectSection(SolutionItems) = preProject
+		docsrc\tools\generate.fsx = docsrc\tools\generate.fsx
+		docsrc\tools\templates\template.cshtml = docsrc\tools\templates\template.cshtml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{8E6D5255-776D-4B61-85F9-73C37AA1FB9A}"
+	ProjectSection(SolutionItems) = preProject
+		docsrc\content\index.fsx = docsrc\content\index.fsx
+		docsrc\content\tutorial.fsx = docsrc\content\tutorial.fsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ED8079DD-2B06-4030-9F0F-DC548F98E1C4}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FognitiveServices.Tests", "tests\FognitiveServices.Tests\FognitiveServices.Tests.fsproj", "{05E2F0A9-28CF-4B05-9DDF-4E88319B47C3}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FognitiveServices.Vision", "src\FognitiveServices.Vision\FognitiveServices.Vision.fsproj", "{C5847472-31A9-4D2D-95EA-9774A2DF45F9}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FognitiveServices.Vision.TestClient", "src\FognitiveServices.Vision.TestClient\FognitiveServices.Vision.TestClient.fsproj", "{FF11C9AC-4AF4-4395-8B87-385A4B4D3BCB}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FognitiveServices.Text", "src\FognitiveServices.Text\FognitiveServices.Text.fsproj", "{DEE7BF18-A53F-4946-ABE9-39A3F88B9B2D}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FognitiveServices.Text.TestClient", "src\FognitiveServices.Text.TestClient\FognitiveServices.Text.TestClient.fsproj", "{E2D2AB68-01AD-4E59-BEAB-853453FCE660}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,27 +49,40 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FCEDBAB7-41CE-4835-833D-A3BF97307B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FCEDBAB7-41CE-4835-833D-A3BF97307B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FCEDBAB7-41CE-4835-833D-A3BF97307B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FCEDBAB7-41CE-4835-833D-A3BF97307B78}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E10DC96-E7AB-400F-BF77-8E52A175EDC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E10DC96-E7AB-400F-BF77-8E52A175EDC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E10DC96-E7AB-400F-BF77-8E52A175EDC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E10DC96-E7AB-400F-BF77-8E52A175EDC4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9A8F0DC5-8F9E-4E08-9A80-C759FD58FEB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A8F0DC5-8F9E-4E08-9A80-C759FD58FEB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A8F0DC5-8F9E-4E08-9A80-C759FD58FEB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A8F0DC5-8F9E-4E08-9A80-C759FD58FEB3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FCD5B8BE-6959-4583-9CD5-9523DDA52B3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FCD5B8BE-6959-4583-9CD5-9523DDA52B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FCD5B8BE-6959-4583-9CD5-9523DDA52B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FCD5B8BE-6959-4583-9CD5-9523DDA52B3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A70BA8A0-CFD9-4591-A678-64E54E63ABF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A70BA8A0-CFD9-4591-A678-64E54E63ABF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A70BA8A0-CFD9-4591-A678-64E54E63ABF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A70BA8A0-CFD9-4591-A678-64E54E63ABF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05E2F0A9-28CF-4B05-9DDF-4E88319B47C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E2F0A9-28CF-4B05-9DDF-4E88319B47C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E2F0A9-28CF-4B05-9DDF-4E88319B47C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E2F0A9-28CF-4B05-9DDF-4E88319B47C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5847472-31A9-4D2D-95EA-9774A2DF45F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5847472-31A9-4D2D-95EA-9774A2DF45F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5847472-31A9-4D2D-95EA-9774A2DF45F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5847472-31A9-4D2D-95EA-9774A2DF45F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF11C9AC-4AF4-4395-8B87-385A4B4D3BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF11C9AC-4AF4-4395-8B87-385A4B4D3BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF11C9AC-4AF4-4395-8B87-385A4B4D3BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF11C9AC-4AF4-4395-8B87-385A4B4D3BCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEE7BF18-A53F-4946-ABE9-39A3F88B9B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE7BF18-A53F-4946-ABE9-39A3F88B9B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEE7BF18-A53F-4946-ABE9-39A3F88B9B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE7BF18-A53F-4946-ABE9-39A3F88B9B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D2AB68-01AD-4E59-BEAB-853453FCE660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D2AB68-01AD-4E59-BEAB-853453FCE660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D2AB68-01AD-4E59-BEAB-853453FCE660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D2AB68-01AD-4E59-BEAB-853453FCE660}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{83F16175-43B1-4C90-A1EE-8E351C33435D} = {A6A6AF7D-D6E3-442D-9B1E-58CC91879BE1}
+		{8E6D5255-776D-4B61-85F9-73C37AA1FB9A} = {A6A6AF7D-D6E3-442D-9B1E-58CC91879BE1}
+		{05E2F0A9-28CF-4B05-9DDF-4E88319B47C3} = {ED8079DD-2B06-4030-9F0F-DC548F98E1C4}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4C059048-4CF2-40F2-98EC-41F120095F01}
+		SolutionGuid = {32A73877-88A7-4CFA-B642-B9CA03F3D452}
 	EndGlobalSection
 EndGlobal
