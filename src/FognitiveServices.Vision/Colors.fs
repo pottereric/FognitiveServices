@@ -1,9 +1,9 @@
 ﻿namespace FognitiveServices.Vision
 
-open Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models
 open System
 
 module Colors = 
+    open Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models
 
     type BlackWhiteInfo =
         | Color
@@ -20,11 +20,11 @@ module Colors =
 
     let get (analysis : ImageAnalysis) =
         let makeType (colorType : Nullable<bool>) =
-            if colorType.HasValue then
-                match colorType.Value with
-                | true -> BlackAndWhite
-                | false -> Color
-            else
+            
+            match colorType |> Option.ofNullable  with
+            | Some cto ->
+                if cto then BlackAndWhite else Color
+            | None ->
                 Unknown
 
         {Foreground = analysis.Color.DominantColorForeground;

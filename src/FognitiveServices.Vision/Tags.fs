@@ -7,11 +7,10 @@ module Tags =
 
     let get (analysis : ImageAnalysis) =
         let makeTag (t : ImageTag) =
-            match t.Name, t.Confidence.HasValue with
-            | null, _ -> None
-            | name, true -> Some { Name = name ; Confidence = Some t.Confidence.Value }
-            | name, false -> Some { Name = name ; Confidence = None }
-
+            match t.Name with
+            | null -> None
+            | name -> Some { Name = name ; Confidence = Option.ofNullable t.Confidence }
+        
         match analysis.Tags with
         | null -> []
         | t -> 
